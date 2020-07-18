@@ -2,6 +2,7 @@
 
 // make sourcemaps work!
 require('source-map-support').install();
+const colors = require('colors');
 
 var yargs = require("yargs");
 var pkg = require("./package.json");
@@ -102,7 +103,11 @@ var options = {
 
 var server = ganache.server(options);
 
-console.log(detailedVersion);
+console.log(colors.bold.yellow('----------------------------------------------'));
+console.log(colors.bold.yellow(detailedVersion));
+console.log(colors.bold.bgRed.yellow(' MODIFIED VERSION  '));
+console.log(colors.bold.yellow('----------------------------------------------'));
+
 
 let started = false;
 process.on("uncaughtException", function(e) {
@@ -235,8 +240,10 @@ function startGanache(err, result) {
     console.log("Max Cache Size: " + maxCacheSize);
   }
 
-  console.log("");
-  console.log("Listening on " + options.hostname + ":" + options.port);
+  console.log("-----------------------------------------------");
+  console.log(colors.bold.bgRed.yellow("Listening on " + options.hostname + ":" + options.port));
+  console.log(colors.bold.bgRed.yellow(' MODIFIED VERSION  '));
+  console.log("-----------------------------------------------");
 }
 
 server.listen(options.port, options.hostname, startGanache);

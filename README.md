@@ -1,3 +1,12 @@
+### Fixed :   Forking mainnet results in erroneous revert reason
+
+*[Forking mainnet results in erroneous revert reason](https://github.com/trufflesuite/ganache-core/issues/571)
+*[Replace delete() with put(0) - delete is broken for forked vms #5][https://github.com/compound-finance/ganache-core/pull/5]
+
+
+
+
+
 <p align="center">
   <em>NOTICE</em>: <code>testrpc</code> is now <code>ganache-cli</code>. Use it just as you would <code>testrpc</code>.
 </p>
